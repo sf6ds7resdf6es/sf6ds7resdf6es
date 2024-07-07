@@ -11,7 +11,7 @@ local Window = Rayfield:CreateWindow({
       },
    KeySystem = true, -- Set this to true to use our key system
     KeySettings = {
-       Title = "Get Ket",
+       Title = "Get Key",
        Subtitle = "Key System",
        Note = "Join https://discord.gg/VmYHEy4vzW",
        FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
