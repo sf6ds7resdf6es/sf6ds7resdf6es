@@ -1,51 +1,30 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-    Name = "Vixz's Script Hub",
-    LoadingTitle = "Vixz's Script Hub",
-    LoadingSubtitle = "by Vixz",
-    ConfigurationSaving = {
-       Enabled = true,
-       FolderName = nil, -- Create a custom folder for your hub/game
-       FileName = "Big Hub"
-      },
-  KeySystem = true, -- Set this to true to use our key system
+   Name = "Vixz's Script Hub",
+   LoadingTitle = "Vixz's Script Hub",
+   LoadingSubtitle = "by Vixz_Exploitz",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "VmYHEy4vzW", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = True, -- Set this to true to use our key system
    KeySettings = {
-      Title = "Get Key",
-      Subtitle = "https://discord.gg/VmYHEy4vzW",
-      Note = "Join https://discord.gg/VmYHEy4vzW for key",
+      Title = "Key System",
+      Subtitle = "Key System",
+      Note = "Join gg/VmYHEy4vzW",
       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
       Key = {"eK82meTMKcP6aOTfcMEmQJKNDYplYHhS"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
-
-
-Creating a Tab
-local Tab = Window:CreateTab("Tab Example", 4483362458) -- Title, Image
-
-Creating a Section
-local Section = Tab:CreateSection("Section Example")
-
-Updating a Section
-Section:Set("Section Example")
-
-Destroying the Interface
-Rayfield:Destroy()
-
-Previous
-Booting the Library
-Next
-Elements
-Creating a Window
-Creating a Tab
-Creating a Section
-Updating a Section
-Des
-    }
- })
-
  local PlayerTab = Window:CreateTab("Player", 4483362458) -- Title, Image
 
  local WalksSpeedSection = PlayerTab:CreateSection("WalkSpeed Etc.")
