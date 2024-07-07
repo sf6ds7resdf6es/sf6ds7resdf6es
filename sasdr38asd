@@ -1,0 +1,231 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+    Name = "Vixz's Script Hub",
+    LoadingTitle = "Vixz's Script Hub",
+    LoadingSubtitle = "by Vixz",
+    ConfigurationSaving = {
+       Enabled = true,
+       FolderName = nil, -- Create a custom folder for your hub/game
+       FileName = "Big Hub"
+      },
+   KeySystem = false, -- Set this to true to use our key system
+    KeySettings = {
+       Title = "Untitled",
+       Subtitle = "Key System",
+       Note = "No method of obtaining the key is provided",
+       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+       Key = {"Vixz_Exploitz.Is+Cool"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+    }
+ })
+
+ local PlayerTab = Window:CreateTab("Player", 4483362458) -- Title, Image
+
+ local WalksSpeedSection = PlayerTab:CreateSection("WalkSpeed Etc.")
+
+local WalkSpeedSlider = PlayerTab:CreateSlider({
+   Name = "WalkSpeed",
+   Range = {16, 1000},
+   Increment = 1,
+   Suffix = "Default is 16",
+   CurrentValue = 16,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+  game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+   end,
+})
+
+local JumpPowerSlider = PlayerTab:CreateSlider({
+    Name = "JumpPower",
+    Range = {50, 750},
+    Increment = 1,
+    Suffix = "Default is 50",
+    CurrentValue = 50,
+    Flag = "Slider2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+    end,
+ })
+ 
+ local AdminSection = PlayerTab:CreateSection("Admin Commands")
+
+ local infiniteYield = PlayerTab:CreateButton({
+    Name = "Infinite Yield",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+    end,
+ })
+
+ local InfiniteYieldReborn = PlayerTab:CreateButton({
+   Name = "Infinite Yield Reborn",
+   Callback = function()
+      loadstring(game:HttpGet("https://github.com/fuckusfm/infiniteyield-reborn/raw/master/source"))()
+   end,
+})
+
+ local NamelessAdmin = PlayerTab:CreateButton({
+    Name = "Nameless Admin",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+    end,
+ })
+
+ local FatesAdmin = PlayerTab:CreateButton({
+    Name = "Fates Admin",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))()
+    end,
+ })
+
+ local ScriptsTab = Window:CreateTab("Scripts", 4483362458) -- Title, Image
+
+ local DaHood = ScriptsTab:CreateSection("Da Hood")
+ 
+ local AzureModded = ScriptsTab:CreateButton({
+    Name = "Azure Modded",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded"))()
+    end,
+ })
+
+ local VazPremium = ScriptsTab:CreateButton({
+    Name = "Vaz Premium",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/mp-8/vazz/main/vvvv",true))();
+    end,
+ })
+
+ local Arsenal = ScriptsTab:CreateSection("Arsenal")
+
+ local ThunderClientLite = ScriptsTab:CreateButton({
+    Name = "Thunder Client Lite",
+    Callback = function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b95e8fecdf824e41f4a030044b055add.lua"))()
+    end,
+ })
+
+ local QuotasHub = ScriptsTab:CreateButton({
+    Name = "Quotas Hub",
+    Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Insertl/QuotasHub/main/BETAv1.3"))()
+    end,
+ })
+
+ local BladeBall = ScriptsTab:CreateSection("Blade Ball")
+
+ local FFJHubV2 = ScriptsTab:CreateButton({
+    Name = "FFJ Hub V2",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/Loader.lua"))()
+    end,
+ })
+
+ local FFJHubV3 = ScriptsTab:CreateButton({
+    Name = "FFJ Hub V3",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/BladeBallV3.lua"))()
+    end,
+ })
+
+ local Doors = ScriptsTab:CreateSection("Doors")
+
+ local FFJHub = ScriptsTab:CreateButton({
+    Name = "FFJ Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/Loader.lua"))()
+    end,
+ })
+
+ local PrisonLife = ScriptsTab:CreateSection("Prison Life")
+ 
+ local PrisonWare = ScriptsTab:CreateButton({
+   Name = "PrisonWare",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt"))()
+   end,
+})
+
+local BedWars = ScriptsTab:CreateSection("BedWars")
+
+local VapeV4 = ScriptsTab:CreateButton({
+   Name = "VapeV4",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+   end,
+})
+
+local MVSSH = ScriptsTab:CreateSection("Murder vs Sheriff")
+
+local TbaoHubMVSSH = ScriptsTab:CreateButton({
+   Name = "Tbao Hub",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubMurdervssheriff"))()
+   end,
+})
+
+local MM2 = ScriptsTab:CreateSection("Murder Mystery 2")
+
+local MM2Script = ScriptsTab:CreateButton({
+   Name = "MM2 Script",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/loader.lua'))()
+   end,
+})
+
+local CounterBlox = ScriptsTab:CreateSection("Counter Blox")
+
+local Script = ScriptsTab:CreateButton({
+   Name = "DeleteMobV2",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Mick-gordon/Hyper-Escape/main/DeleteMobV2.lua", true))()
+   end,
+})
+
+local BloxFruits = ScriptsTab:CreateSection("Blox Fruits")
+
+local BloxFruitsScript = ScriptsTab:CreateButton({
+   Name = "Blox Fruits Script",
+   Callback = function()
+      loadstring(game:HttpGet(("https://raw.githubusercontent.com/koonpeatch/PeatEX/master/BKHAX/BloxFruits"),true))()
+   end,
+})
+
+local TSBG = ScriptsTab:CreateSection("The Strongest Battlegrounds")
+
+local TSBGSCRIPT1 = ScriptsTab:CreateButton({
+   Name = "Script Support Solara",
+   Callback = function()
+      loadstring(game:HttpGet("https://scriptblox.com/raw/PSYCHIC-The-Strongest-Battlegrounds-SUPPORTED-SOLARA-BEST-14359"))()
+   end,
+})
+
+local TSBGSCRIPT2 = ScriptsTab:CreateButton({
+   Name = "BadWare",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/sandwichk/RobloxScripts/main/Scripts/BadWare/Hub/Load.lua", true))()
+   end,
+})
+
+local Brookhaven = ScriptsTab:CreateSection("Brookhaven")
+
+local BrookhavenScript = ScriptsTab:CreateButton({
+   Name = "Brookhaven Script",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/M1ZZ001/BrookhavenR4D/main/Brookhaven%20R4D%20Script'))()
+   end,
+})
+
+local HideAndSeekExtr = ScriptsTab:CreateSection("Hide And Seek Extreme")
+
+local HideAndSeekExtrScript = ScriptsTab:CreateButton({
+   Name = "Hide And Seek Script",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/n1kx4/hideandseekextreme/main/hideandseek"))()
+   end,
+})
+
+local CreditsTab = Window:CreateTab("Credits", 4483362458) -- Title, Image
+
+local XScriptLabel = CreditsTab:CreateLabel("Credits: XScript for most of the scripts: https://discord.gg/ytUnhNGcfB.")
