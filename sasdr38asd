@@ -145,6 +145,13 @@ local VapeV4 = ScriptsTab:CreateButton({
    end,
 })
 
+local CocoKiwi = ScriptsTab:CreateButton({
+   Name = "CocoKiwi",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/cocotv666/CocoKiwi/main/Cocokiwi"))() true))()
+   end,
+})
+
 local MVSSH = ScriptsTab:CreateSection("Murder vs Sheriff")
 
 local TbaoHubMVSSH = ScriptsTab:CreateButton({
